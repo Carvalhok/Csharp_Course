@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Palavra_this.Entities
 {
+    //Uso da palavras this para aproveitamento de código em construtores
     class Exemplo
     {
         public string Nome { get; set; }
