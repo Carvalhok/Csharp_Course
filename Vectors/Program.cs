@@ -7,23 +7,29 @@ namespace Vectors
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("How many rooms will be rented? ");
             int n = int.Parse(Console.ReadLine());
-            Product[] vect = new Product[n];
+            Room[] room = new Room[10];
             
             for (int i = 0; i < n; i++) {
+                Console.WriteLine($"Rent #{i + 1}");
+                Console.Write("Name: ");
                 string nome = Console.ReadLine();
-                double price = double.Parse(Console.ReadLine());
-                vect[i] = new Product { Nome = nome, Price = price };
+                Console.Write("Email: ");
+                string email = (Console.ReadLine());
+                Console.Write("Room number: ");
+                int roomNumber = int.Parse(Console.ReadLine());
+                room[roomNumber] = new Room(nome, email, roomNumber);
             }
 
-            double sum = 0.0;
-            for (int i = 0; i < n; i++)
+            Console.WriteLine("Busy rooms: ");
+            for (int i = 0; i < 10; i++)
             {
-                sum += vect[i].Price;
+                if(room[i] != null)
+                {
+                    Console.WriteLine(room[i]);
+                }
             }
-
-            double avg = sum / n;
-            Console.WriteLine(avg);
         }
     }
 }
