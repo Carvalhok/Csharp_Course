@@ -20,5 +20,10 @@ namespace ParamsChanger
         {
             x *= 3;
         }
+
+        public static void Double(int origin, out int resultado)
+        {
+            resultado = 2 * origin;
+        }
     }
 }
