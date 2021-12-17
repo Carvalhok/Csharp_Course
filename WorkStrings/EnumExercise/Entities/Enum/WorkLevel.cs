@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EnumExercise.Entities.Enum
+﻿namespace EnumExercise.Entities.Enum
 {
-    class WorkLevel
+    enum WorkLevel : int
     {
+        Junior = 0,
+        MidLevel = 1,
+        Senior = 2
     }
 }
