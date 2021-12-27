@@ -55,7 +55,7 @@ namespace Section10Exercise
                 totalTax += taxpayer.TaxToPay();
             }
 
-            Console.WriteLine("Tatal Taxes: $ " + totalTax);
+            Console.WriteLine("Tatal Taxes: $ " + totalTax.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
