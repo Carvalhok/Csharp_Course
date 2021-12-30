@@ -42,8 +42,8 @@ namespace Section11Exceptions.Entities
 
             if (amount > WithdrawLimit)
                 throw new DomainException("The amount exceeds withdraw limit");
-            else
-                Balance -= amount;
+            
+            Balance -= amount;
         }
 
         public override string ToString()
