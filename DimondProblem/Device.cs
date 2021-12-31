@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DimondProblem
+﻿namespace DimondProblem
 {
     abstract class Device
     {
-        public string SerialNumber { get; set; }
+        public string Message { get; set; }
 
-       abstract public void ProcessDoc(string document);
+        protected Device(string message)
+        {
+            Message = message;
+        }
+
+        abstract public void ProcessDoc();
     }
 }

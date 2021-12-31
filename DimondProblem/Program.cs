@@ -6,7 +6,10 @@ namespace DimondProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ComboDevice comboDevice = new ComboDevice("Happy New Year");
+            comboDevice.ProcessDoc();
+            comboDevice.Print();
+            comboDevice.Scann();
         }
     }
 }

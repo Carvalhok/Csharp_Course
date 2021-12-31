@@ -2,8 +2,26 @@
 
 namespace DimondProblem
 {
-    class ComboDevice : Scanner, Printer
+    class ComboDevice : Device, IScanner, IPrinter
     {
-        // Não é possível ter herança multipla
+        public ComboDevice(string message) : base(message)
+        {
+            Message = message;
+        }
+
+        public override void ProcessDoc()
+        {
+            Console.WriteLine("PrcessDoc:  " + Message);
+        }
+
+        public void Scann()
+        {
+            Console.WriteLine("Scann: " + Message);
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("Printer: " + Message);
+        }
     }
 }
